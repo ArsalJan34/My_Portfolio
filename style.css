@@ -163,7 +163,108 @@ padding: 60px 40px ;
 display: grid;
 
 }
+/* ===== PROJECT CARD ===== */
+.project1 {
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #00C2FF;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 450px;
+  text-align: center;
+  transition: all 0.4s ease;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 194, 255, 0.3);
+}
 
+.project1:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0, 194, 255, 0.6);
+}
+
+/* ===== PROJECT IMAGES ===== */
+.project-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Image Wrappers */
+.laptop img,
+.phone img {
+  height: 200px;
+  /* equal height */
+  border-radius: 10px;
+  border: 2px solid #00C2FF;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: contain;
+  /* ✅ shows full image without cutting */
+  background-color: #000;
+  /* fills empty space neatly */
+}
+
+/* ✅ Different widths */
+.laptop img {
+  width: 280px;
+  /* wider for laptop */
+}
+
+.phone img {
+  width: 120px;
+  /* narrower for phone */
+}
+
+/* Hover Effects */
+.project-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 194, 255, 0.5);
+}
+
+/* ===== PROJECT TITLE ===== */
+.project-title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #00C2FF;
+  margin-bottom: 10px;
+}
+
+/* ===== LIVE DEMO BUTTON ===== */
+.project-link {
+  display: inline-block;
+  padding: 8px 18px;
+  background: #00C2FF;
+  color: #000;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: #0096cc;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 194, 255, 0.5);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .project-images {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .laptop img,
+  .phone img {
+    width: 220px;
+    height: 160px;
+  }
+
+  .project1 {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
