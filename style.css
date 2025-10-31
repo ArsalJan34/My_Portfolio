@@ -17,7 +17,6 @@ body {
   font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
   color: #fff;
   background-color: #000;
-  /* add base background to ensure contrast */
   background-size: 600px 600px;
   overflow-x: hidden;
 }
@@ -42,7 +41,7 @@ header {
   align-items: center;
   background: transparent;
   border-bottom: 2px solid #00C2FF;
-  padding: 10px 4%;
+  padding: 10px 60px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -146,9 +145,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  gap: 2rem;
-  padding: 60px 4%;
+  gap: 32px;
+  padding: 60px;
 }
 
 .introtext1 {
@@ -189,9 +187,7 @@ header {
 .me-img {
   background: url("./images/bg.png") no-repeat center center;
   background-size: contain;
-  /* ensures full background visible */
   background-color: rgba(0, 0, 0, 0.6);
-  /* adds depth */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -213,8 +209,148 @@ header {
 }
 
 /* -----------------------
+   WHAT DO I HELP SECTION
+----------------------- */
+.what-do-i {
+  padding: 80px 100px;
+  color: #00C2FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.what-do-i-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* --- Left Side (Skill Tags) --- */
+.content-list1 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 500px;
+}
+
+.skills a {
+  color: #00C2FF;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border: 1px solid #00C2FF;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.skills a:hover {
+  background: #00C2FF;
+  color: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 194, 255, 0.3);
+}
+
+/* --- Right Side (Text Description) --- */
+.content-list2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 600;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #00C2FF;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.help-description {
+  font-size: 18px;
+  line-height: 30px;
+  color: #ddd;
+}
+
+.help-description span {
+  color: #00C2FF;
+  font-weight: 600;
+}
+
+/* --- Animation (Fade-in on Scroll) --- */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.what-do-i-content {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* -----------------------
    RESPONSIVE DESIGN
 ----------------------- */
+@media (max-width: 992px) {
+  .what-do-i-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .content-list2 {
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .help-description {
+    font-size: 16px;
+  }
+
+  .skills {
+    gap: 15px;
+  }
+
+  .skills a {
+    font-size: 16px;
+    padding: 10px 18px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     display: none;
@@ -223,9 +359,11 @@ header {
   .menu-icon {
     display: block;
   }
-.introtext1, .i-do{
-  display: none;
-}
+
+  .introtext1,
+  .i-do {
+    display: none;
+  }
 
   .me-img {
     min-height: 300px;
