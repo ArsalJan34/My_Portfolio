@@ -5,67 +5,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <link rel="StyleSheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
+  <!-- ===== HEADER ===== -->
   <header id="header" class="header">
     <div class="logo">Arsal</div>
-    <nav class="sidebar">
+
+    <nav class="mobile-nav">
       <a href="#" onclick="hideSidebar()"><i class='bx bx-x'></i></a>
       <a href="#services">Services</a>
-      <a href="#Experience">Experience</a>
-      <a href="#Work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
     </nav>
-    <nav class="navbar">
+
+    <nav class="main-nav">
       <a href="#services">Services</a>
-      <a href="#Experience">Experience</a>
-      <a href="#Work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
     </nav>
-    <div class="social-media">
+
+    <div class="social-links">
       <a href="#"><i class='bx bxl-facebook-circle'></i></a>
       <a href="#"><i class='bx bxl-instagram-alt'></i></a>
       <a href="#"><i class='bx bxl-twitter'></i></a>
     </div>
+
     <div class="menu-icon" onclick="showSidebar()">
       <a href="#"><i class='bx bx-menu'></i></a>
     </div>
   </header>
-  <section class="intro">
-<div class="introtext1">
-  <a class="Me">Hey There, I am Arsal</a>
-  <a class="email">arsaljaan532@gmail.com</a>
-  <a class="exp">
-    <p class="exp-num">03</p>
-    <p class="exp-text"> Years Experience</p>
-  </a>
-</div>
-<div class="me-img"><img src="./images/Me.png"></div>
-<div class="i-do">I Design Beautiful Responsive Websites</div>
+
+  <!-- ===== INTRO SECTION ===== -->
+  <section class="intro-section">
+    <div class="intro-content">
+      <h1 class="intro-name">Hey There, I am Arsal</h1>
+      <p class="intro-p">I build beautiful, responsive, and user-friendly web experiences that bring ideas to life.</p>
+    </div>
+    <div class="intro-image"><img src="./images/WhatsApp Image 2025-10-12 at 12.26.08_1dd77fd5.jpg" alt="Arsal"></div>
   </section>
-<section class="what-do-i">
-<div class="what-do-i-content">
-<div class="content-list1">
-  <div class="skills">
-    <a href="#">Website Designing</a>
-    <a href="#">HTML Websites</a>
-    <a href="#">CSS Styling</a>
-    <a href="#">JavaScript Features</a>
-    <a href="#">Bootstrap Responsive Layouts</a>
-  </div>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services-section" id="services">
+            <h2 class="section-title">What I Offer</h2>
+    <div class="services-container">
+      <div class="services-description">
+
+        <p class="section-text">
+          I design and build modern, responsive, and high-performing websites using
+          <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>, and <span>Bootstrap</span>.
+          My focus is on creating clean user interfaces, smooth animations, and professional layouts
+          that help businesses and individuals stand out online.
+        </p>
+      </div>
+<div class="services-list">
+  <a href="#">Website Design</a>
+  <a href="#">HTML Development</a>
+  <a href="#">CSS Styling</a>
+  <a href="#">JavaScript Features</a>
+  <a href="#">Bootstrap Responsive Layouts</a>
 </div>
-<div class="content-list2">
-    <h2 class="section-title">What Do I Help</h2>
-    <p class="help-description">
-      I design and build modern, responsive, and high-performing websites using
-      <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>, and <span>Bootstrap</span>.
-      I focus on creating clean user interfaces, smooth animations, and professional layouts
-      that help businesses and individuals stand out online.
-    </p>
-</div>
-</div>
-</section>
+    </div>
+  </section>
   <script src="script.js"></script>
 </body>
 </html>
