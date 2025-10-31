@@ -146,7 +146,7 @@ header {
   align-items: center;
   gap: 32px;
   padding: 60px;
-  flex-wrap: wrap;
+
 }
 
 .introtext1 {
@@ -330,7 +330,7 @@ header {
   }
 
   .intro {
-    flex-direction: column;
+
     text-align: center;
     padding: 40px 20px;
   }
