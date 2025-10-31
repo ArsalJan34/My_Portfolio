@@ -123,6 +123,10 @@ font-size: 32px;
 
 }
 /* What i offer section or SECTION 2  */
+.services-section{
+  padding: 60px 40px;
+  background: rgb(25, 25, 25);
+}
 .section-title{
   color: #00C2FF;
   text-align: center;
@@ -154,6 +158,12 @@ font-size: 32px;
   padding: 10px;
   text-align: center;
 }
+.projects-section{
+padding: 60px 40px ;
+display: grid;
+
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
