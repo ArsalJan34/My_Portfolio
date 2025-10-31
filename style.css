@@ -308,6 +308,8 @@ margin: 8px;
   color: #00C2FF;
   border: 2px solid #00C2FF;
   background-color: white;
+  transform: translateY(8px);
+    box-shadow: 0 0 20px rgba(0, 194, 255, 0.6);
 }
 
 /* ===== RESPONSIVE ===== */
