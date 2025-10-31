@@ -1,0 +1,243 @@
+/* -----------------------
+   GLOBAL RESET & BASICS
+----------------------- */
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  color: #fff;
+  background-color: #000;
+  /* add base background to ensure contrast */
+  background-size: 600px 600px;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -----------------------
+   HEADER
+----------------------- */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border-bottom: 2px solid #00C2FF;
+  padding: 10px 4%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  color: #00C2FF;
+}
+
+.logo img {
+  width: 150px;
+  object-fit: contain;
+}
+
+/* Navbar Links */
+.navbar {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar a {
+  color: #00C2FF;
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.25s ease, border-bottom 0.25s ease;
+}
+
+.navbar a:hover {
+  border-bottom: 0.5px solid #00C2FF;
+}
+
+/* -----------------------
+   MENU ICON (Mobile)
+----------------------- */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon .bx-menu {
+  color: #00C2FF;
+  font-size: 32px;
+}
+
+/* -----------------------
+   SIDEBAR (Mobile Nav)
+----------------------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 250px;
+  height: 100vh;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  transition: right 0.4s ease;
+}
+
+.sidebar.show {
+  right: 0;
+}
+
+.sidebar a {
+  color: #00C2FF;
+  font-size: 18px;
+  margin: 18px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.25s ease, border-bottom 0.25s ease;
+}
+
+.sidebar a:hover {
+  border-bottom: 0.5px solid #00C2FF;
+}
+
+.sidebar .bx-x {
+  font-size: 30px;
+  color: #00C2FF;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+/* -----------------------
+   INTRO SECTION
+----------------------- */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 2rem;
+  padding: 60px 4%;
+}
+
+.introtext1 {
+  color: #00C2FF;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 20px;
+  max-width: 600px;
+}
+
+.Me {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.exp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exp-num {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.i-do {
+  color: #00C2FF;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+/* -----------------------
+   IMAGE SECTION
+----------------------- */
+.me-img {
+  background: url("./images/bg.png") no-repeat center center;
+  background-size: contain;
+  /* ensures full background visible */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* adds depth */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  border-radius: 20px;
+  min-height: 400px;
+}
+
+.me-img img {
+  width: 300px;
+  margin-top: 30px;
+  border-radius: 15px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.me-img img:hover {
+  transform: scale(1.05);
+}
+
+/* -----------------------
+   RESPONSIVE DESIGN
+----------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+.introtext1, .i-do{
+  display: none;
+}
+
+  .me-img {
+    min-height: 300px;
+    padding: 30px;
+  }
+
+  .me-img img {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .Me {
+    font-size: 36px;
+  }
+}
