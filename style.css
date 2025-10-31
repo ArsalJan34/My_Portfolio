@@ -250,6 +250,65 @@ font-size: 32px;
   color: #fff;
   box-shadow: 0 0 15px rgba(0, 194, 255, 0.5);
 }
+.contact h2 {
+  color: #00C2FF;
+  text-align: center;
+  font-size: 40px;
+
+}
+.contact {
+  padding:  60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.form-group label {
+  display: block;
+  margin: 8px;
+  color: #00C2FF;
+  font-weight: 500;
+}
+.contact form {
+  max-width: 600px;
+  margin: 5px auto;
+  background: transparent;
+  padding: 40px 30px;
+  border-radius: 15px;
+  border: 2px solid #00C2FF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: border .3s ease, background .3s ease;
+}
+.btn{
+text-align: center;
+margin: 8px;
+}
+.btn button{
+  padding: 10px ;
+  background-color: #0096cc;
+  border-radius: 50px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  transition: .5s ease;
+}
+.btn button:hover{
+  color: #00C2FF;
+  border: 2px solid #00C2FF;
+  background-color: white;
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
