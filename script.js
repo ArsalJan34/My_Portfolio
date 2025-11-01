@@ -25,3 +25,21 @@ function hideSidebar() {
 //   sidebar.classList.add("show");
 
 // }
+// Add this in a <script> tag or JS file
+  const skills = document.querySelectorAll(".skill-level");
+
+    function checkSkills() {
+      const triggerBottom = window.innerHeight * 0.8;
+
+      skills.forEach(skill => {
+        const skillTop = skill.getBoundingClientRect().top;
+        const skillLevel = skill.getAttribute("data-level");
+
+        if (skillTop < triggerBottom) {
+          skill.style.width = skillLevel; // Animate to full width
+        }
+      });
+    }
+
+    window.addEventListener("scroll", checkSkills);
+    window.addEventListener("load", checkSkills);
