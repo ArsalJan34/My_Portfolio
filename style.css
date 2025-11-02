@@ -51,6 +51,9 @@ padding: 10px 4%;
   animation: slideTop 1s ease forwards;
   animation-delay: calc(.2s * var(--i));
 }
+.main-nav a:hover {
+  border-bottom: 2px solid #00c2ff;
+}
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -75,6 +78,7 @@ padding: 10px 4%;
   margin: 18px 0;
   display: block;
 }
+
 .mobile-nav a:hover {
   color: #00C2FF;
 }
