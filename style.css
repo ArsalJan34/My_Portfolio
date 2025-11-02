@@ -153,58 +153,97 @@ font-size: 32px;
 .section-text{
   max-width: 300px;
   color: #00C2FF;
-}
-.services-list{
+}.services-container {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: flex-start;
 }
+
 .services-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  /* space between each service item */
+  gap: 20px;
+  position: relative;
+  padding-left: 40px;
+  /* space for the line */
 }
 
+/* vertical line */
+.services-list::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, #00c2ff, #7a00ff);
+  border-radius: 5px;
+  animation: lineGrow 3s ease-in-out forwards;
+}
+
+/* each service item */
 .services-list a {
   display: flex;
-  /* make image + text align in a row */
   align-items: center;
-  /* vertically center them */
   gap: 10px;
-  /* space between icon and text */
-  color: #000000;
+  text-decoration: none;
+  color: #000;
   border: 2px solid #00C2FF;
   border-radius: 50px;
   padding: 10px 20px;
-  text-decoration: none;
   background: linear-gradient(135deg, #01b5af, #7004bd, #2bd9e2, #006f71);
   background-size: 400% 400%;
-  animation: shine 6s ease infinite;
+  opacity: 0.3;
+  animation: shineSequence 6s ease-in-out infinite;
+  animation-delay: var(--delay);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .services-list a:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 15px rgba(0, 194, 255, 0.3);
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 194, 255, 0.4);
 }
 
 .services-list img {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   object-fit: contain;
 }
-@keyframes shine {
-  0% {
-    background-position: 0% 50%;
-  }
 
-  50% {
-    background-position: 100% 50%;
+/* Keyframes for the line */
+@keyframes lineGrow {
+  0% {
+    height: 0;
   }
 
   100% {
-    background-position: 0% 50%;
+    height: 100%;
+  }
+}
+
+/* Keyframes for shining each item */
+@keyframes shineSequence {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    filter: brightness(0.8);
+  }
+
+  10% {
+    opacity: 1;
+    filter: brightness(1.3);
+    transform: scale(1.05);
+  }
+
+  20% {
+    opacity: 1;
+    filter: brightness(1.2);
+  }
+
+  30%,
+  90% {
+    opacity: 0.3;
   }
 }
 /* SKills section */
