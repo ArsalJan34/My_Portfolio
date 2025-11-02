@@ -103,10 +103,15 @@ font-size: 32px;
   display: flex;
   flex-direction: column;
 }
+.intro-name span{
+  color: #00C6FF;
+  font-size: 30px;
+}
 .intro-name, .intro-p{
-  color:#00C2FF;
+  color:white;
 }
 .intro-p{
+  margin-top: 10px;
   max-width: 400px;
 }
 .intro-image{
