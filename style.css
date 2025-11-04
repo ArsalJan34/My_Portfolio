@@ -39,6 +39,26 @@ padding: 10px 4%;
   font-size: 30px;
   font-weight: bolder;
   color: #00C2FF;
+    background: linear-gradient(90deg,
+          #00C2FF,
+          #ffffff,
+          #7a00ff,
+          #00C2FF);
+      background-size: 300%;
+      font-weight: bold;
+      font-size: 40px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 4s linear infinite;
+}
+@keyframes shine {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 300%;
+  }
 }
 .main-nav a {
   display: inline-block;
