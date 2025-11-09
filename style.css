@@ -332,6 +332,22 @@ font-size: 32px;
 /* ===== PROJECT CARD ===== */
 .project1 {
   background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #ff6f00;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 450px;
+  text-align: center;
+  transition: all 0.4s ease;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.3);
+}
+
+.project1:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(255, 89, 0, 0.6);
+}
+.project2 {
+  background: rgba(0, 0, 0, 0.85);
   border: 2px solid #00C2FF;
   border-radius: 15px;
   padding: 25px;
@@ -341,12 +357,28 @@ font-size: 32px;
   color: #fff;
   box-shadow: 0 0 10px rgba(0, 194, 255, 0.3);
 }
-
-.project1:hover {
+.project2:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 20px rgba(0, 194, 255, 0.6);
+  box-shadow: 0 0 20px rgba(0, 255, 229, 0.6);
+}
+.project3 {
+  background: rgba(0, 0, 0, 0.95);
+  border: 2px solid #c48a47;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 450px;
+  text-align: center;
+  transition: all 0.4s ease;
+  color: #fff8f0;
+
+  box-shadow: 0 0 15px rgba(196, 138, 71, 0.35);
+
 }
 
+.project3:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(214, 158, 92, 0.6);
+}
 /* ===== PROJECT IMAGES ===== */
 .project-images {
   display: flex;
@@ -369,7 +401,42 @@ font-size: 32px;
   background-color: #000;
   /* fills empty space neatly */
 }
-
+.project1 .laptop img,
+.project1 .phone img {
+  height: 200px;
+  /* equal height */
+  border-radius: 10px;
+  border: 2px solid #ff8000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: contain;
+  /* ✅ shows full image without cutting */
+  background-color: #000;
+  /* fills empty space neatly */
+}
+.project2 .laptop img,
+.project2 .phone img {
+  height: 200px;
+  /* equal height */
+  border-radius: 10px;
+  border: 2px solid #00ffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: contain;
+  /* ✅ shows full image without cutting */
+  background-color: #000;
+  /* fills empty space neatly */
+}
+.project3 .laptop img,
+.project3 .phone img {
+  height: 200px;
+  /* equal height */
+  border-radius: 10px;
+  border: 2px solid #53371b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: contain;
+  /* ✅ shows full image without cutting */
+  background-color: #000;
+  /* fills empty space neatly */
+}
 /* ✅ Different widths */
 .laptop img {
   width: 280px;
@@ -382,11 +449,18 @@ font-size: 32px;
 }
 
 /* Hover Effects */
-.project-images img:hover {
+.project1 .project-images img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 194, 255, 0.5);
+  box-shadow: 0 0 15px rgba(255, 106, 0, 0.5);
 }
-
+.project2 .project-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 242, 0.5);
+}
+.project3 .project-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(214, 158, 92, 0.6);
+}
 /* ===== PROJECT TITLE ===== */
 .project-title {
   display: block;
