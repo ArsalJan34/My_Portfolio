@@ -471,7 +471,22 @@ font-size: 32px;
 }
 
 /* ===== LIVE DEMO BUTTON ===== */
-.project-link {
+.project1 .project-link {
+  display: inline-block;
+  padding: 8px 18px;
+  background: #ff8400;
+  color: #000;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.project1 .project-link:hover {
+  background: #ff8800;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 106, 0, 0.5);
+}
+.project2 .project-link {
   display: inline-block;
   padding: 8px 18px;
   background: #00C2FF;
@@ -481,10 +496,25 @@ font-size: 32px;
   transition: all 0.3s ease;
 }
 
-.project-link:hover {
+.project2 .project-link:hover {
   background: #0096cc;
   color: #fff;
   box-shadow: 0 0 15px rgba(0, 194, 255, 0.5);
+}
+.project3 .project-link {
+  display: inline-block;
+  padding: 8px 18px;
+  background: #5b421c;
+  color: #000;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.project3 .project-link:hover {
+  background: #4d3412;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(88, 52, 18, 0.5);
 }
 .contact h2 {
   color: #00C2FF;
