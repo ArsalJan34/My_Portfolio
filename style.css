@@ -285,11 +285,11 @@ font-size: 32px;
   max-width: 700px;
   margin: 100px auto;
 }
-
-h2 {
+.skills-section h2 {
   text-align: center;
   color: #00C2FF;
   margin-bottom: 30px;
+    font-size: 40px;
 }
 
 .skill {
