@@ -1409,30 +1409,6 @@ body {
   }
 }
 
-.light-theme .project1,
-.light-theme .project2,
-.light-theme .project3 {
-  background: rgba(255, 255, 255, 0.9) !important;
-  color: #000 !important;
-}
-
-.light-theme .form-group input,
-.light-theme .form-group textarea {
-  background: rgba(0, 0, 0, 0.05) !important;
-  color: #000 !important;
-  border-color: #666 !important;
-}
-
-.light-theme .btn button {
-  background-color: #000 !important;
-  color: #fff !important;
-}
-
-.light-theme .btn button:hover {
-  background-color: #00C2FF !important;
-  color: #000 !important;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
