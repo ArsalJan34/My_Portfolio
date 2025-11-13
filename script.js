@@ -43,3 +43,17 @@ function hideSidebar() {
 
     window.addEventListener("scroll", checkSkills);
     window.addEventListener("load", checkSkills);
+
+
+const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
+
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("light-theme");
+
+  if (body.classList.contains("light-theme")) {
+    toggleBtn.textContent = "🌙 Dark Mode";
+  } else {
+    toggleBtn.textContent = "☀️ Light Mode";
+  }
+});
